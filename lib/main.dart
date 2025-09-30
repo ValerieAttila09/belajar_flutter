@@ -351,25 +351,26 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  ElevatedButton(onPressed: onPressed, child: child)
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HalamanKedua()),
+                        );
+                      },
+                      child: Text(
+                        "Halaman Berikutnya",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: const Color.fromARGB(255, 231, 84, 100)
+                        ),
+                      ))
                 ], // Children
               ),
-            )
-          ),
+            )),
       ),
     );
   }
 }
-
-// Image.network(
-//   "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-//   width: 280,
-//   height: 320,
-//   fit: BoxFit.contain,
-// ),
-// SizedBox(height: 10,),
-// Text(
-//   "Gambar 1",
-//   style: TextStyle(
-//     fontSize: 16,
-//     fontWeight: FontWeight.
